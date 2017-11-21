@@ -30,7 +30,7 @@
  *
  *  @section DESCRIPTION
  *
- *  This program will test the walker node for the turtlebot walker
+ *  This program will run the walker node for the turtlebot
  *
  */
 
@@ -45,6 +45,11 @@
  * @return     nothing
  */
 int main(int argc, char* argv[]) {
-    ros::init(argc, argv, "walker");
-    return 0;
+  // Initialize the ros node
+  ros::init(argc, argv, "walker");
+  // Create the walker object
+  Walker walker;
+  // Run the walker behaviour
+  walker.runRobot();
+  return 0;
 }
