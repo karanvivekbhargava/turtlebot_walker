@@ -22,7 +22,7 @@
  *  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  *  DEALINGS IN THE SOFTWARE.
  *
- *  @file    talkerTest.cpp
+ *  @file    walker.hpp
  *  @author  Karan Vivek Bhargava
  *  @copyright MIT License
  *
@@ -30,23 +30,35 @@
  *
  *  @section DESCRIPTION
  *
- *  This program will test the walker node for the turtlebot walker
+ *  This program is a part of the beginner tutorials in ROS
+ *  It defines the publisher (talker)
  *
  */
 
-#include <ros/ros.h>
-#include <ros/service_client.h>
-#include <tf/transform_listener.h>
-#include <gtest/gtest.h>
+#ifndef INCLUDE_WALKER_HPP_
+#define INCLUDE_WALKER_HPP_
+#include <sstream>
 #include <string>
-#include "walker.hpp"
+#include "ros/ros.h"
+#include "std_msgs/String.h"
 
 /**
- * @brief      Tests whether 1=1 for sanity
- *
- * @param[in]  TESTSuite          gtest framework
- * @param[in]  sanityCheck        Name of the test
+ * @brief      Class for Walker.
  */
-TEST(TESTSuite, sanityCheck) {
-  EXPECT_EQ(1,1);
+class Walker {
+ public:
+  /**
+   * @brief      Constructor for Walker
+   */
+  Walker();
+  /**
+   * @brief      Destroys the object.
+   */
+  ~Walker();
+  /**
+   * @brief      Callback function for Walker
+   */
+  callback();
 }
+
+#endif  // INCLUDE_WALKER_HPP_

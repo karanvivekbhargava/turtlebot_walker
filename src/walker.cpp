@@ -22,7 +22,7 @@
  *  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  *  DEALINGS IN THE SOFTWARE.
  *
- *  @file    talkerTest.cpp
+ *  @file    walker.cpp
  *  @author  Karan Vivek Bhargava
  *  @copyright MIT License
  *
@@ -34,19 +34,14 @@
  *
  */
 
-#include <ros/ros.h>
-#include <ros/service_client.h>
-#include <tf/transform_listener.h>
-#include <gtest/gtest.h>
-#include <string>
 #include "walker.hpp"
 
-/**
- * @brief      Tests whether 1=1 for sanity
- *
- * @param[in]  TESTSuite          gtest framework
- * @param[in]  sanityCheck        Name of the test
- */
-TEST(TESTSuite, sanityCheck) {
-  EXPECT_EQ(1,1);
+Walker::Walker() {
+}
+
+Walker::~Walker() {
+}
+
+Walker::callback() {
+    // TODO (Karan)
 }
