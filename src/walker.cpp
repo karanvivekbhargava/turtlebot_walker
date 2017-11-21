@@ -47,9 +47,11 @@ Walker::Walker() {
   // initialise the collision flag to be false
   collision = false;
   // Publish the velocity to cmd_vel_mux/input/navi
-  velocityPub = n.advertise <geometry_msgs::Twist> ("/cmd_vel_mux/input/navi", 1000);
+  velocityPub = n.advertise <geometry_msgs::Twist> ("/cmd_vel_mux/input/navi",
+    1000);
   // Subcribe to the /scan topic and use the laserCallback method
-  sub = n.subscribe <sensor_msgs::LaserScan> ("/scan", 500, &Walker::laserCallback, this);
+  sub = n.subscribe <sensor_msgs::LaserScan> ("/scan", 500,
+    &Walker::laserCallback, this);
   // Define the initial velocity message
   msg.linear.x = 0.0;
   msg.linear.y = 0.0;

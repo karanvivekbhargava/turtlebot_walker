@@ -46,5 +46,5 @@
  */
 TEST(TESTSuite, collisionTest) {
   Walker walker;
-  EXPECT_EQ(walker.checkObstacle(),0);
+  EXPECT_EQ(walker.checkObstacle(), 0);
 }
