@@ -1,7 +1,7 @@
 <launch>
 
     <arg name="record" default="false"/>
-    <arg name="secs" default="45"/>
+    <arg name="secs" default="30"/>
 
     <include file="$(find turtlebot_gazebo)/launch/turtlebot_world.launch">
     </include>
