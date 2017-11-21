@@ -35,18 +35,16 @@
  */
 
 #include <ros/ros.h>
-#include <ros/service_client.h>
-#include <tf/transform_listener.h>
 #include <gtest/gtest.h>
-#include <string>
 #include "walker.hpp"
 
 /**
- * @brief      Tests whether 1=1 for sanity
+ * @brief      Tests whether collision flag is set to false
  *
  * @param[in]  TESTSuite          gtest framework
  * @param[in]  sanityCheck        Name of the test
  */
-TEST(TESTSuite, sanityCheck) {
-  EXPECT_EQ(1,1);
+TEST(TESTSuite, collisionTest) {
+  Walker walker;
+  EXPECT_EQ(walker.checkObstacle(),0);
 }
